@@ -9,11 +9,11 @@ based on code by u/bass-blowfish
 #join-game, .watermark {
   /* Replace "url(data:image...)" with "url("PATH_TO YOUR_IMAGE")".
      Keep as is if you don't want to add images. */
-  --login-world-logo: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=);
-  --login-footer-logo: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=);
+  --login-world-logo: url(../ui/world-cover.png);
+  --login-footer-logo: url(../ui/dnd-logo.png);
 
   /* Change this to adjust the size of the footer logo */
-  --login-footer-logo-height: 25px;
+  --login-footer-logo-height: 50px;
 
   /* Here you can change the base and hover color for the buttons
      on the login form. */
@@ -43,6 +43,7 @@ body.vtt.players .watermark:before {
   background: var(--login-footer-logo);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: auto var(--login-footer-logo-height);
   width: 100%;
   height: var(--login-footer-logo-height);
   margin-top: calc(calc(var(--login-footer-logo-height) * -1) - 5px);
